@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1571698BEBD211EB321B01E4 /* WebBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = "TEMP_C9C10152-1FB4-4C1B-A393-0B2E171ED8DD" /* WebBrowserView.swift */; };
-		280EB3798634A8B644D9F42F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = "TEMP_1D2E2A2F-7C8F-4471-B27C-3597996BB2FF" /* ContentView.swift */; };
-		41EFDDF40E3910BA11D2FDC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = "TEMP_B26AAEE7-18E1-488E-8DF9-7922B17F91F9" /* Assets.xcassets */; };
-		4EF5F4DA5A84F5ECB419F82D /* GENSPARK_PROMPT.txt in Resources */ = {isa = PBXBuildFile; fileRef = "TEMP_C02D54B0-8A57-4DC0-8EF7-74D27A7A5289" /* GENSPARK_PROMPT.txt */; };
-		8D34F9250C0189B1CCB46E0A /* PRESENTATION.md in Resources */ = {isa = PBXBuildFile; fileRef = "TEMP_287E4930-8C79-437D-BC03-710A9820724C" /* PRESENTATION.md */; };
-		97DEFA31C59EB3AB52A9AF9B /* EarPhoneMusicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = "TEMP_6315B4F4-41C2-4110-A1EF-F817D0E87497" /* EarPhoneMusicApp.swift */; };
-		9DD6E9698205110F2B12BAD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = "TEMP_C2300967-0B90-4A8B-B889-CEF2BC11F3D1" /* AppDelegate.swift */; };
-		BD9610E6B9E13CABEB45A0F6 /* MusicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = "TEMP_F5CF275F-D409-4474-9989-F263E7B17E7F" /* MusicViewModel.swift */; };
+		1225D2518FD0054E585BB88C /* GENSPARK_PROMPT.txt in Resources */ = {isa = PBXBuildFile; fileRef = "TEMP_8A1A1394-7C12-4CAD-908C-F70CBA21619E" /* GENSPARK_PROMPT.txt */; };
+		130BCEF06D1F3FA792C73606 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = "TEMP_65E97B73-14F6-4E38-A924-4ADD7810CAD6" /* Assets.xcassets */; };
+		21EDE863A8A316B1F07CEDC3 /* MusicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = "TEMP_BEF343A8-2840-4FFD-80E8-7DBD147D1455" /* MusicViewModel.swift */; };
+		47668E03846FBE18302E692F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = "TEMP_20A1EB4F-7330-4962-8027-A8BE1FB601BB" /* README.md */; };
+		59626B3BF3F149E10BF74B4A /* PRESENTATION.md in Resources */ = {isa = PBXBuildFile; fileRef = "TEMP_6A0F3879-D006-4CF7-8232-7F3050ED3AA2" /* PRESENTATION.md */; };
+		7F872B2998B9C99F1625E155 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = "TEMP_FC10BC05-B3B0-40E4-9F59-25190AA87606" /* ContentView.swift */; };
+		BD53785EDD8DFD9FE634CD0C /* EarPhoneMusicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = "TEMP_73C5B716-E688-46B2-92CE-08AB12024AD0" /* EarPhoneMusicApp.swift */; };
+		BDE9087DF587C88D8765D856 /* YouTubePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = "TEMP_63045195-46BA-4675-98DF-63E2D5447ACC" /* YouTubePlayerView.swift */; };
+		BF02DC8FD107CFEADC51EDF0 /* YouTubeVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = "TEMP_4094C96D-CF42-48DC-A939-E24FFD55E42E" /* YouTubeVideo.swift */; };
 		E11896FC1022ABA1CF410EDB /* README.sample in Resources */ = {isa = PBXBuildFile; fileRef = 52C9A428BC997311BCD8B99C /* README.sample */; };
-		EDAA4F80E07240A8FB518102 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = "TEMP_2960120E-6E0A-4DF4-9638-C3527D143C5C" /* README.md */; };
-		FE418DB54B4E53297AB03B2E /* EarPhoneMusic4-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = "TEMP_3E9451D8-0D72-457E-9C45-6478B7B1F345" /* EarPhoneMusic4-Info.plist */; };
+		EA359E7E506C07395246EAEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = "TEMP_229B04AD-F7AE-4060-BBB3-948E2DB4AEAA" /* AppDelegate.swift */; };
+		F0814E884B773F03DBE43492 /* EarPhoneMusic4-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = "TEMP_81A81DFA-F710-47E0-BD70-68487D4029C6" /* EarPhoneMusic4-Info.plist */; };
+		F224A93EA5F9794EA73D0BD8 /* WebBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = "TEMP_A6012A47-D419-42EE-B3FA-0ADE917828CD" /* WebBrowserView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,13 +36,17 @@
 		0C2F0CFA602F5E99B8A3A0D4 /* c5f20c109e021cb0e01b614373e947b78f2517 */ = {isa = PBXFileReference; path = c5f20c109e021cb0e01b614373e947b78f2517; sourceTree = "<group>"; };
 		102A7DDB8D0EBAA065B7D34A /* 7389d4f4261ad8da0805ccdb50f9ec4b7eede8 */ = {isa = PBXFileReference; path = 7389d4f4261ad8da0805ccdb50f9ec4b7eede8; sourceTree = "<group>"; };
 		14CC16185CBB4BD6F456004C /* c2ff2c4262f2be03656b1cd597176582ca9c14 */ = {isa = PBXFileReference; path = c2ff2c4262f2be03656b1cd597176582ca9c14; sourceTree = "<group>"; };
+		23CE2618BA4F77E185271B36 /* 1767af396252c910a3b608de289c1074250460 */ = {isa = PBXFileReference; path = 1767af396252c910a3b608de289c1074250460; sourceTree = "<group>"; };
 		23DF75AD2D6508620B9DA8F3 /* 1440a7cecb7a92ec473775efd1a3d86e098759 */ = {isa = PBXFileReference; path = 1440a7cecb7a92ec473775efd1a3d86e098759; sourceTree = "<group>"; };
+		248BD5A5015B8887D1EEAE1C /* 3aeafa6948cffffd4a9e4d7ad2caa0e5329c05 */ = {isa = PBXFileReference; path = 3aeafa6948cffffd4a9e4d7ad2caa0e5329c05; sourceTree = "<group>"; };
+		2B0D769B9B9B88761F73D9DD /* 79c09431960e0541ee77f1909564221512c0c7 */ = {isa = PBXFileReference; path = 79c09431960e0541ee77f1909564221512c0c7; sourceTree = "<group>"; };
 		323DD532CC6AD230469B6696 /* ORIG_HEAD */ = {isa = PBXFileReference; path = ORIG_HEAD; sourceTree = "<group>"; };
 		34DB2BDA459B55C2BE6C7244 /* 41b48d331e16c134c94cef6c972b41ae617c42 */ = {isa = PBXFileReference; path = 41b48d331e16c134c94cef6c972b41ae617c42; sourceTree = "<group>"; };
 		3B0FAD15CD3F1BD3F1C003D2 /* config */ = {isa = PBXFileReference; path = config; sourceTree = "<group>"; };
 		3B61153108E0DFE053247ED2 /* d0f225e4b97d92f15bf184bc14fe88c3e2d17c */ = {isa = PBXFileReference; path = d0f225e4b97d92f15bf184bc14fe88c3e2d17c; sourceTree = "<group>"; };
 		3C17CCB3A31583F764DF8F02 /* 2a0e449f977bd1581e126815e7f8ebef08d4cb */ = {isa = PBXFileReference; path = 2a0e449f977bd1581e126815e7f8ebef08d4cb; sourceTree = "<group>"; };
 		40015195C34EFC8634A464AF /* 57108d15933336c61d39d8b0a571b7cd83c30c */ = {isa = PBXFileReference; path = 57108d15933336c61d39d8b0a571b7cd83c30c; sourceTree = "<group>"; };
+		410695B487C0E8230375A8C2 /* 2469c11f1b3a65bfcb96dac11c385b42793c13 */ = {isa = PBXFileReference; path = 2469c11f1b3a65bfcb96dac11c385b42793c13; sourceTree = "<group>"; };
 		441BE606C4BEC40C27FF3B39 /* e8a33831402ed99a6f971eabcf94b2d3936cef */ = {isa = PBXFileReference; path = e8a33831402ed99a6f971eabcf94b2d3936cef; sourceTree = "<group>"; };
 		44A1FBAEF1155728E0FD811A /* 0c67bc31b10df744fd9b1223c6562fa0c82af0 */ = {isa = PBXFileReference; path = 0c67bc31b10df744fd9b1223c6562fa0c82af0; sourceTree = "<group>"; };
 		44CBB4D4DC0F42A28713512D /* ed33899e47c3a60b7bee7c1892a1ac9ae7e4db */ = {isa = PBXFileReference; path = ed33899e47c3a60b7bee7c1892a1ac9ae7e4db; sourceTree = "<group>"; };
@@ -71,15 +77,19 @@
 		73543C18750DFF276B535ACA /* e12ec3cab9f2f990caaf6ab6f62e40f6ddfdcb */ = {isa = PBXFileReference; path = e12ec3cab9f2f990caaf6ab6f62e40f6ddfdcb; sourceTree = "<group>"; };
 		73EA96658C17BABAA73D82D8 /* 4eddc58783322bb955f199c188231fcef0ff80 */ = {isa = PBXFileReference; path = 4eddc58783322bb955f199c188231fcef0ff80; sourceTree = "<group>"; };
 		74C5AA73B1A3CBEC408CFFFF /* 3aeb8c56cb3d389d7a2c2d6895932b89cfdf91 */ = {isa = PBXFileReference; path = 3aeb8c56cb3d389d7a2c2d6895932b89cfdf91; sourceTree = "<group>"; };
+		76DA78341C636D37222188D3 /* 1746c8f4cae6e5d2b8452da027ef0ead709e12 */ = {isa = PBXFileReference; path = 1746c8f4cae6e5d2b8452da027ef0ead709e12; sourceTree = "<group>"; };
+		7A159619F75617A5BDB06C12 /* c1b11112b158ff41c351970429578f60517a50 */ = {isa = PBXFileReference; path = c1b11112b158ff41c351970429578f60517a50; sourceTree = "<group>"; };
 		7A301819295ED1687C79A168 /* 38fc96e8750675278497980d82b606b4b0fd34 */ = {isa = PBXFileReference; path = 38fc96e8750675278497980d82b606b4b0fd34; sourceTree = "<group>"; };
 		7DD697C0BCEB78ABD933C0F7 /* b21611e0c2d0953a4423fcaa0b8e2c970f4c50 */ = {isa = PBXFileReference; path = b21611e0c2d0953a4423fcaa0b8e2c970f4c50; sourceTree = "<group>"; };
 		7E1A143E278978347CDE0D36 /* 48013a44d0f58cf57794afd9b226bc1b48048e */ = {isa = PBXFileReference; path = 48013a44d0f58cf57794afd9b226bc1b48048e; sourceTree = "<group>"; };
 		84466AE9C7B197BCF0C1B49A /* d6ee5ec104b3039056e59defe4f30b4b0d5852 */ = {isa = PBXFileReference; path = d6ee5ec104b3039056e59defe4f30b4b0d5852; sourceTree = "<group>"; };
+		8771B38A684EB850963EC262 /* 58ddd8c9d0286e4587ad22353a3dd8ef89f14d */ = {isa = PBXFileReference; path = 58ddd8c9d0286e4587ad22353a3dd8ef89f14d; sourceTree = "<group>"; };
 		8826D739895D9E78B1677EB7 /* 3514ed0f5cf6f0abc923f1d19d69a35555244c */ = {isa = PBXFileReference; path = 3514ed0f5cf6f0abc923f1d19d69a35555244c; sourceTree = "<group>"; };
 		8CAA225C096F46270694436A /* c0d28aba0717498bb076d4f438d19532d3d3f2 */ = {isa = PBXFileReference; path = c0d28aba0717498bb076d4f438d19532d3d3f2; sourceTree = "<group>"; };
 		8F4F548543E3A2CBF2CF743F /* f820914e4784b9b595bc2d3b27972d7f4a94bc */ = {isa = PBXFileReference; path = f820914e4784b9b595bc2d3b27972d7f4a94bc; sourceTree = "<group>"; };
 		94CAE8B3E8A73F897A40C2D1 /* 128a428c2069e4485debb34fca116d98ac22d2 */ = {isa = PBXFileReference; path = 128a428c2069e4485debb34fca116d98ac22d2; sourceTree = "<group>"; };
 		960DB79B752E56DCDD769094 /* 9d24b490c5cfc0a47e974873c1b0c64e4398b5 */ = {isa = PBXFileReference; path = 9d24b490c5cfc0a47e974873c1b0c64e4398b5; sourceTree = "<group>"; };
+		96E35872241EF8DB85E26F20 /* 83c0c7ee25bedcb795ab1d23f615ec0881b954 */ = {isa = PBXFileReference; path = 83c0c7ee25bedcb795ab1d23f615ec0881b954; sourceTree = "<group>"; };
 		98F3E20A2035FD869AB97784 /* 4ce88cc41ef692db836f4bbc0827d658471f12 */ = {isa = PBXFileReference; path = 4ce88cc41ef692db836f4bbc0827d658471f12; sourceTree = "<group>"; };
 		9AB609AA959BCA046DEB0A1B /* bb00962077602a40f35fc1e2f6802e15e8a120 */ = {isa = PBXFileReference; path = bb00962077602a40f35fc1e2f6802e15e8a120; sourceTree = "<group>"; };
 		9BF51C0B4C04BE454EF097F0 /* exclude */ = {isa = PBXFileReference; path = exclude; sourceTree = "<group>"; };
@@ -110,6 +120,7 @@
 		CF7AD8FABB7630038A4EE8FD /* 0e01141784c3b781e8fc917e866ad18295c4d0 */ = {isa = PBXFileReference; path = 0e01141784c3b781e8fc917e866ad18295c4d0; sourceTree = "<group>"; };
 		D0AF1B6FF5FCB37162FE1297 /* d94eb89ba46fd2c0d985fe9e8337ff00a2c4ec */ = {isa = PBXFileReference; path = d94eb89ba46fd2c0d985fe9e8337ff00a2c4ec; sourceTree = "<group>"; };
 		D74E402409878B83BB637CBF /* aa92367b8660e648c3a0b16b8ca8f64deef497 */ = {isa = PBXFileReference; path = aa92367b8660e648c3a0b16b8ca8f64deef497; sourceTree = "<group>"; };
+		D8340CC248CC8B919BC0A9F0 /* fc83c21d4b9b269a58420381c4d162347213f7 */ = {isa = PBXFileReference; path = fc83c21d4b9b269a58420381c4d162347213f7; sourceTree = "<group>"; };
 		D91D3E1F01D05DAEDFD46B59 /* ddf8c203e516f3b89a6dd88b57d2dd78dc2d85 */ = {isa = PBXFileReference; path = ddf8c203e516f3b89a6dd88b57d2dd78dc2d85; sourceTree = "<group>"; };
 		D986222A7F59E0AAAD81D2D2 /* main */ = {isa = PBXFileReference; path = main; sourceTree = "<group>"; };
 		DE343800A3DB77DE6F2D7F97 /* 6bd324c26d854187559f27f8194c8afd1795ac */ = {isa = PBXFileReference; path = 6bd324c26d854187559f27f8194c8afd1795ac; sourceTree = "<group>"; };
@@ -133,16 +144,18 @@
 		F9C0F47E75848540920C3822 /* a5810acb4fe38be48db996d7dfe72caaac6e0f */ = {isa = PBXFileReference; path = a5810acb4fe38be48db996d7dfe72caaac6e0f; sourceTree = "<group>"; };
 		FAC486E2CC694673C8436EA8 /* 364f66fb142146360aff983382b6eb09615a52 */ = {isa = PBXFileReference; path = 364f66fb142146360aff983382b6eb09615a52; sourceTree = "<group>"; };
 		FB3366A6AA3D347234403B5E /* ad5e0e08f1535b32bfb874b4bd055029f359df */ = {isa = PBXFileReference; path = ad5e0e08f1535b32bfb874b4bd055029f359df; sourceTree = "<group>"; };
-		"TEMP_1D2E2A2F-7C8F-4471-B27C-3597996BB2FF" /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		"TEMP_287E4930-8C79-437D-BC03-710A9820724C" /* PRESENTATION.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = PRESENTATION.md; sourceTree = "<group>"; };
-		"TEMP_2960120E-6E0A-4DF4-9638-C3527D143C5C" /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		"TEMP_3E9451D8-0D72-457E-9C45-6478B7B1F345" /* EarPhoneMusic4-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "EarPhoneMusic4-Info.plist"; sourceTree = "<group>"; };
-		"TEMP_6315B4F4-41C2-4110-A1EF-F817D0E87497" /* EarPhoneMusicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarPhoneMusicApp.swift; sourceTree = "<group>"; };
-		"TEMP_B26AAEE7-18E1-488E-8DF9-7922B17F91F9" /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		"TEMP_C02D54B0-8A57-4DC0-8EF7-74D27A7A5289" /* GENSPARK_PROMPT.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = GENSPARK_PROMPT.txt; sourceTree = "<group>"; };
-		"TEMP_C2300967-0B90-4A8B-B889-CEF2BC11F3D1" /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		"TEMP_C9C10152-1FB4-4C1B-A393-0B2E171ED8DD" /* WebBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBrowserView.swift; sourceTree = "<group>"; };
-		"TEMP_F5CF275F-D409-4474-9989-F263E7B17E7F" /* MusicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewModel.swift; sourceTree = "<group>"; };
+		"TEMP_20A1EB4F-7330-4962-8027-A8BE1FB601BB" /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		"TEMP_229B04AD-F7AE-4060-BBB3-948E2DB4AEAA" /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		"TEMP_4094C96D-CF42-48DC-A939-E24FFD55E42E" /* YouTubeVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeVideo.swift; sourceTree = "<group>"; };
+		"TEMP_63045195-46BA-4675-98DF-63E2D5447ACC" /* YouTubePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubePlayerView.swift; sourceTree = "<group>"; };
+		"TEMP_65E97B73-14F6-4E38-A924-4ADD7810CAD6" /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		"TEMP_6A0F3879-D006-4CF7-8232-7F3050ED3AA2" /* PRESENTATION.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = PRESENTATION.md; sourceTree = "<group>"; };
+		"TEMP_73C5B716-E688-46B2-92CE-08AB12024AD0" /* EarPhoneMusicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarPhoneMusicApp.swift; sourceTree = "<group>"; };
+		"TEMP_81A81DFA-F710-47E0-BD70-68487D4029C6" /* EarPhoneMusic4-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "EarPhoneMusic4-Info.plist"; sourceTree = "<group>"; };
+		"TEMP_8A1A1394-7C12-4CAD-908C-F70CBA21619E" /* GENSPARK_PROMPT.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = GENSPARK_PROMPT.txt; sourceTree = "<group>"; };
+		"TEMP_A6012A47-D419-42EE-B3FA-0ADE917828CD" /* WebBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBrowserView.swift; sourceTree = "<group>"; };
+		"TEMP_BEF343A8-2840-4FFD-80E8-7DBD147D1455" /* MusicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewModel.swift; sourceTree = "<group>"; };
+		"TEMP_FC10BC05-B3B0-40E4-9F59-25190AA87606" /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -370,6 +383,14 @@
 				9BF51C0B4C04BE454EF097F0 /* exclude */,
 			);
 			path = info;
+			sourceTree = "<group>";
+		};
+		4B5FC8A27E054A4C561EC404 /* 11 */ = {
+			isa = PBXGroup;
+			children = (
+				2B0D769B9B9B88761F73D9DD /* 79c09431960e0541ee77f1909564221512c0c7 */,
+			);
+			path = 11;
 			sourceTree = "<group>";
 		};
 		4F11798A83BB557324E15B78 /* 91 */ = {
@@ -635,6 +656,7 @@
 				5C56E53673326030E0A85679 /* 3d */,
 				F37A4E4248AA8777FB517120 /* 3e */,
 				D8C42A8C24D978329DCC7624 /* 04 */,
+				9EEDFDB3CDD82CA8A365C553 /* 4a */,
 				B296FA0E833F851CCAD334CB /* 4c */,
 				1B9D2E3BA767BD2940A0BA7E /* 4f */,
 				5566C86694ADAC79DA36DDC1 /* 5c */,
@@ -649,11 +671,14 @@
 				E0F49830EFB31B53B3D291D1 /* 9b */,
 				C12C1293542378B85BF6B737 /* 9e */,
 				1495711A78E09ABECD13B9B6 /* 10 */,
+				4B5FC8A27E054A4C561EC404 /* 11 */,
 				CE76B328219E7EF53F5F37DA /* 13 */,
+				A62D3B150D7E46A15E45EA70 /* 19 */,
 				A56DEA4AEF1955F6AE88C39C /* 22 */,
 				60F578A2F9FF1CA853B852B1 /* 23 */,
 				0F4E63469BB7B8572994752D /* 31 */,
 				EC0BBF5F7F784E49E6840DBA /* 32 */,
+				CF4C89910B5644D43709E8C0 /* 33 */,
 				355388EC17BA3F47E7E8A346 /* 43 */,
 				6B93EEB7BA9C473DC124F8CD /* 45 */,
 				88E9C5285F93EDB45C2F09CC /* 46 */,
@@ -742,8 +767,17 @@
 			isa = PBXGroup;
 			children = (
 				0A1FDD0A0B67D6834E10D590 /* 33721dda7cf69b67b5012b17e7764a87d8a342 */,
+				D8340CC248CC8B919BC0A9F0 /* fc83c21d4b9b269a58420381c4d162347213f7 */,
 			);
 			path = 3a;
+			sourceTree = "<group>";
+		};
+		9EEDFDB3CDD82CA8A365C553 /* 4a */ = {
+			isa = PBXGroup;
+			children = (
+				23CE2618BA4F77E185271B36 /* 1767af396252c910a3b608de289c1074250460 */,
+			);
+			path = 4a;
 			sourceTree = "<group>";
 		};
 		A42552F56D4A9EEEB11B5961 /* f6 */ = {
@@ -760,6 +794,14 @@
 				C2D87D1E1F8D505347CEC2B1 /* ff73a19f0d72034d22f992a26f210628db77a8 */,
 			);
 			path = 22;
+			sourceTree = "<group>";
+		};
+		A62D3B150D7E46A15E45EA70 /* 19 */ = {
+			isa = PBXGroup;
+			children = (
+				8771B38A684EB850963EC262 /* 58ddd8c9d0286e4587ad22353a3dd8ef89f14d */,
+			);
+			path = 19;
 			sourceTree = "<group>";
 		};
 		A6E47F77097974632F77355E /* 66 */ = {
@@ -862,6 +904,7 @@
 			isa = PBXGroup;
 			children = (
 				4B251A7A45F7D38407ABC6FD /* 62f25f44ab5d96b092987c3457b80fa37973f6 */,
+				76DA78341C636D37222188D3 /* 1746c8f4cae6e5d2b8452da027ef0ead709e12 */,
 			);
 			path = aa;
 			sourceTree = "<group>";
@@ -908,6 +951,15 @@
 			path = 13;
 			sourceTree = "<group>";
 		};
+		CF4C89910B5644D43709E8C0 /* 33 */ = {
+			isa = PBXGroup;
+			children = (
+				410695B487C0E8230375A8C2 /* 2469c11f1b3a65bfcb96dac11c385b42793c13 */,
+				7A159619F75617A5BDB06C12 /* c1b11112b158ff41c351970429578f60517a50 */,
+			);
+			path = 33;
+			sourceTree = "<group>";
+		};
 		D2A42E3BE586979C193DBF9A /* refs */ = {
 			isa = PBXGroup;
 			children = (
@@ -938,6 +990,7 @@
 		D8C42A8C24D978329DCC7624 /* 04 */ = {
 			isa = PBXGroup;
 			children = (
+				96E35872241EF8DB85E26F20 /* 83c0c7ee25bedcb795ab1d23f615ec0881b954 */,
 				94CAE8B3E8A73F897A40C2D1 /* 128a428c2069e4485debb34fca116d98ac22d2 */,
 			);
 			path = 04;
@@ -946,6 +999,7 @@
 		D8D476FAA704899120074696 /* db */ = {
 			isa = PBXGroup;
 			children = (
+				248BD5A5015B8887D1EEAE1C /* 3aeafa6948cffffd4a9e4d7ad2caa0e5329c05 */,
 				A02294C237BF54687B1466D4 /* bce9866f9550f28fa40d91cbb936c15232c66f */,
 			);
 			path = db;
@@ -1056,19 +1110,21 @@
 			path = 69;
 			sourceTree = "<group>";
 		};
-		"TEMP_972BDBEE-C5B7-40BE-9636-DAE18431421E" /* EarPhoneMusic4 */ = {
+		"TEMP_D039C3E1-5617-4A2F-9B61-10C4F7B27058" /* EarPhoneMusic4 */ = {
 			isa = PBXGroup;
 			children = (
-				"TEMP_287E4930-8C79-437D-BC03-710A9820724C" /* PRESENTATION.md */,
-				"TEMP_C02D54B0-8A57-4DC0-8EF7-74D27A7A5289" /* GENSPARK_PROMPT.txt */,
-				"TEMP_B26AAEE7-18E1-488E-8DF9-7922B17F91F9" /* Assets.xcassets */,
-				"TEMP_6315B4F4-41C2-4110-A1EF-F817D0E87497" /* EarPhoneMusicApp.swift */,
-				"TEMP_2960120E-6E0A-4DF4-9638-C3527D143C5C" /* README.md */,
-				"TEMP_3E9451D8-0D72-457E-9C45-6478B7B1F345" /* EarPhoneMusic4-Info.plist */,
-				"TEMP_F5CF275F-D409-4474-9989-F263E7B17E7F" /* MusicViewModel.swift */,
-				"TEMP_C9C10152-1FB4-4C1B-A393-0B2E171ED8DD" /* WebBrowserView.swift */,
-				"TEMP_C2300967-0B90-4A8B-B889-CEF2BC11F3D1" /* AppDelegate.swift */,
-				"TEMP_1D2E2A2F-7C8F-4471-B27C-3597996BB2FF" /* ContentView.swift */,
+				"TEMP_6A0F3879-D006-4CF7-8232-7F3050ED3AA2" /* PRESENTATION.md */,
+				"TEMP_8A1A1394-7C12-4CAD-908C-F70CBA21619E" /* GENSPARK_PROMPT.txt */,
+				"TEMP_65E97B73-14F6-4E38-A924-4ADD7810CAD6" /* Assets.xcassets */,
+				"TEMP_4094C96D-CF42-48DC-A939-E24FFD55E42E" /* YouTubeVideo.swift */,
+				"TEMP_63045195-46BA-4675-98DF-63E2D5447ACC" /* YouTubePlayerView.swift */,
+				"TEMP_73C5B716-E688-46B2-92CE-08AB12024AD0" /* EarPhoneMusicApp.swift */,
+				"TEMP_20A1EB4F-7330-4962-8027-A8BE1FB601BB" /* README.md */,
+				"TEMP_81A81DFA-F710-47E0-BD70-68487D4029C6" /* EarPhoneMusic4-Info.plist */,
+				"TEMP_BEF343A8-2840-4FFD-80E8-7DBD147D1455" /* MusicViewModel.swift */,
+				"TEMP_A6012A47-D419-42EE-B3FA-0ADE917828CD" /* WebBrowserView.swift */,
+				"TEMP_229B04AD-F7AE-4060-BBB3-948E2DB4AEAA" /* AppDelegate.swift */,
+				"TEMP_FC10BC05-B3B0-40E4-9F59-25190AA87606" /* ContentView.swift */,
 				5EFB46BA328CDC5B9EC65FDE /* .git */,
 			);
 			path = EarPhoneMusic4;
@@ -1134,11 +1190,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41EFDDF40E3910BA11D2FDC0 /* Assets.xcassets in Resources */,
-				FE418DB54B4E53297AB03B2E /* EarPhoneMusic4-Info.plist in Resources */,
-				4EF5F4DA5A84F5ECB419F82D /* GENSPARK_PROMPT.txt in Resources */,
-				8D34F9250C0189B1CCB46E0A /* PRESENTATION.md in Resources */,
-				EDAA4F80E07240A8FB518102 /* README.md in Resources */,
+				130BCEF06D1F3FA792C73606 /* Assets.xcassets in Resources */,
+				F0814E884B773F03DBE43492 /* EarPhoneMusic4-Info.plist in Resources */,
+				1225D2518FD0054E585BB88C /* GENSPARK_PROMPT.txt in Resources */,
+				59626B3BF3F149E10BF74B4A /* PRESENTATION.md in Resources */,
+				47668E03846FBE18302E692F /* README.md in Resources */,
 				E11896FC1022ABA1CF410EDB /* README.sample in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1150,11 +1206,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DD6E9698205110F2B12BAD8 /* AppDelegate.swift in Sources */,
-				280EB3798634A8B644D9F42F /* ContentView.swift in Sources */,
-				97DEFA31C59EB3AB52A9AF9B /* EarPhoneMusicApp.swift in Sources */,
-				BD9610E6B9E13CABEB45A0F6 /* MusicViewModel.swift in Sources */,
-				1571698BEBD211EB321B01E4 /* WebBrowserView.swift in Sources */,
+				EA359E7E506C07395246EAEF /* AppDelegate.swift in Sources */,
+				7F872B2998B9C99F1625E155 /* ContentView.swift in Sources */,
+				BD53785EDD8DFD9FE634CD0C /* EarPhoneMusicApp.swift in Sources */,
+				21EDE863A8A316B1F07CEDC3 /* MusicViewModel.swift in Sources */,
+				F224A93EA5F9794EA73D0BD8 /* WebBrowserView.swift in Sources */,
+				BDE9087DF587C88D8765D856 /* YouTubePlayerView.swift in Sources */,
+				BF02DC8FD107CFEADC51EDF0 /* YouTubeVideo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

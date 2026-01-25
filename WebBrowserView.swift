@@ -1,15 +1,77 @@
 import SwiftUI
 import WebKit
+import AVFoundation
 
 struct WebBrowserView: View {
     let url: URL
+    let mode: AppMode
     @Environment(\.dismiss) private var dismiss
     @StateObject private var webViewModel = WebViewModel()
 
-    init(url: URL) {
+    init(url: URL, mode: AppMode) {
         self.url = url
+        self.mode = mode
         print("🌐 [9] WebBrowserView 初期化")
         print("📍 初期URL: \(url.absoluteString)")
+        print("🎯 モード: \(mode.rawValue)")
+
+        // オーディオセッション変更の通知を監視
+        NotificationCenter.default.addObserver(
+            forName: AVAudioSession.interruptionNotification,
+            object: AVAudioSession.sharedInstance(),
+            queue: .main
+        ) { notification in
+            print("🔔 [WebBrowser] オーディオ割り込み通知を受信")
+            if let userInfo = notification.userInfo,
+               let typeValue = userInfo[AVAudioSessionInterruptionTypeKey] as? UInt,
+               let type = AVAudioSession.InterruptionType(rawValue: typeValue) {
+                switch type {
+                case .began:
+                    print("   ⚠️ [割り込み開始] オーディオが中断されました")
+                case .ended:
+                    print("   ✅ [割り込み終了] オーディオ再開可能")
+                    if let optionsValue = userInfo[AVAudioSessionInterruptionOptionKey] as? UInt {
+                        let options = AVAudioSession.InterruptionOptions(rawValue: optionsValue)
+                        if options.contains(.shouldResume) {
+                            print("   ▶️ [自動再開] オーディオを再開すべき")
+                        }
+                    }
+                @unknown default:
+                    print("   ❓ [不明な割り込みタイプ]")
+                }
+            }
+        }
+
+        // ルート変更の通知を監視
+        NotificationCenter.default.addObserver(
+            forName: AVAudioSession.routeChangeNotification,
+            object: AVAudioSession.sharedInstance(),
+            queue: .main
+        ) { notification in
+            print("🔔 [WebBrowser] オーディオルート変更通知を受信")
+            if let userInfo = notification.userInfo,
+               let reasonValue = userInfo[AVAudioSessionRouteChangeReasonKey] as? UInt,
+               let reason = AVAudioSession.RouteChangeReason(rawValue: reasonValue) {
+                print("   📝 変更理由: \(reason.rawValue)")
+                switch reason {
+                case .newDeviceAvailable:
+                    print("   🎧 新しいデバイスが利用可能")
+                case .oldDeviceUnavailable:
+                    print("   ❌ 古いデバイスが利用不可")
+                case .categoryChange:
+                    print("   🔄 カテゴリ変更")
+                case .override:
+                    print("   ⚡ オーバーライド（出力先変更）")
+                case .routeConfigurationChange:
+                    print("   ⚙️ ルート設定変更")
+                default:
+                    print("   ❓ その他の理由: \(reason.rawValue)")
+                }
+
+                let session = AVAudioSession.sharedInstance()
+                print("   📊 現在の出力: \(session.currentRoute.outputs.map { $0.portType.rawValue }.joined(separator: ", "))")
+            }
+        }
     }
 
     var body: some View {
@@ -43,6 +105,7 @@ struct WebBrowserView: View {
                 // WebView
                 WebView(
                     url: url,
+                    mode: mode,
                     viewModel: webViewModel
                 )
                 .ignoresSafeArea(edges: .bottom)
@@ -118,6 +181,7 @@ class WebViewModel: ObservableObject {
 // WKWebViewをSwiftUIで使用するためのラッパー
 struct WebView: UIViewRepresentable {
     let url: URL
+    let mode: AppMode
     @ObservedObject var viewModel: WebViewModel
 
     func makeUIView(context: Context) -> WKWebView {
@@ -157,16 +221,18 @@ struct WebView: UIViewRepresentable {
     }
 
     func makeCoordinator() -> Coordinator {
-        Coordinator(viewModel: viewModel, initialURL: url)
+        Coordinator(viewModel: viewModel, initialURL: url, mode: mode)
     }
 
     class Coordinator: NSObject, WKNavigationDelegate {
         let viewModel: WebViewModel
         let initialURL: URL
+        let mode: AppMode
 
-        init(viewModel: WebViewModel, initialURL: URL) {
+        init(viewModel: WebViewModel, initialURL: URL, mode: AppMode) {
             self.viewModel = viewModel
             self.initialURL = initialURL
+            self.mode = mode
         }
 
         // KVO: URLプロパティの変更を監視
@@ -175,14 +241,16 @@ struct WebView: UIViewRepresentable {
                 if let webView = object as? WKWebView,
                    let newURL = change?[.newKey] as? URL,
                    let oldURL = change?[.oldKey] as? URL {
-                    print("🔔 [URL変更通知 - KVO]")
+                    print("🔔 [URL変更通知 - KVO] モード: \(mode.rawValue)")
                     print("    旧URL: \(oldURL.absoluteString)")
                     print("    新URL: \(newURL.absoluteString)")
                     print("    初期URL: \(initialURL.absoluteString)")
 
-                    if newURL.absoluteString != initialURL.absoluteString {
-                        print("⚠️ [JavaScriptによるURL変更検出]")
+                    if mode == .spotify && newURL.absoluteString != initialURL.absoluteString {
+                        print("⚠️ [JavaScriptによるURL変更検出] Spotifyモード")
                         print("🔄 URLが変更されようとしています！")
+                    } else if mode == .youtube {
+                        print("✅ [YouTube] URL変更を許可")
                     }
                 }
             }
@@ -196,22 +264,28 @@ struct WebView: UIViewRepresentable {
         func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
             print("✅ [15] ページ読み込み完了")
             print("━━━━━━━━━━━━━━━━━━━━━━━━━━")
-            print("📊 [URL状態確認]")
+            print("📊 [URL状態確認] モード: \(mode.rawValue)")
             print("    初期URL: \(initialURL.absoluteString)")
             print("    現在のURL: \(webView.url?.absoluteString ?? "不明")")
 
-            // URLが変わっているかチェック
-            if let currentURL = webView.url, currentURL.absoluteString != initialURL.absoluteString {
-                print("⚠️ [URL変更検出] ページが初期URLと異なります！")
-                print("    初期: \(initialURL.absoluteString)")
-                print("    現在: \(currentURL.absoluteString)")
-                print("🔄 [強制リダイレクト] 初期URLに戻します...")
+            // Spotifyの場合のみ厳格なURL制御
+            if mode == .spotify {
+                // URLが変わっているかチェック
+                if let currentURL = webView.url, currentURL.absoluteString != initialURL.absoluteString {
+                    print("⚠️ [URL変更検出] ページが初期URLと異なります！")
+                    print("    初期: \(initialURL.absoluteString)")
+                    print("    現在: \(currentURL.absoluteString)")
+                    print("🔄 [強制リダイレクト] 初期URLに戻します...")
 
-                // 初期URLに戻す
-                let request = URLRequest(url: initialURL)
-                webView.load(request)
+                    // 初期URLに戻す
+                    let request = URLRequest(url: initialURL)
+                    webView.load(request)
+                } else {
+                    print("✅ [URL一致] 初期URLのままです")
+                }
             } else {
-                print("✅ [URL一致] 初期URLのままです")
+                // YouTubeの場合は自由に遷移可能
+                print("✅ [YouTube] URL遷移を許可")
             }
 
             viewModel.isLoading = false
@@ -229,7 +303,7 @@ struct WebView: UIViewRepresentable {
         // アプリに飛ばないようにする重要な設定
         func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
             if let url = navigationAction.request.url {
-                print("🔍 [判定] URL遷移リクエスト: \(url.absoluteString)")
+                print("🔍 [判定] URL遷移リクエスト (\(mode.rawValue)): \(url.absoluteString)")
                 print("📋 スキーム: \(url.scheme ?? "なし")")
 
                 // spotify:// や youtube:// などのカスタムURLスキームをブロック
@@ -247,19 +321,27 @@ struct WebView: UIViewRepresentable {
                     return
                 }
 
-                // 初期URLとの比較（HTTP/HTTPSの場合）
+                // HTTP/HTTPSの場合
                 if url.scheme == "http" || url.scheme == "https" {
-                    if url.absoluteString == initialURL.absoluteString {
-                        print("🎯 [初期URL] このURLは最初に渡されたURLです")
-                        print("✅ [許可] 初期URL")
-                        decisionHandler(.allow)
-                        return
+                    if mode == .spotify {
+                        // Spotifyモード: 初期URLのみ許可
+                        if url.absoluteString == initialURL.absoluteString {
+                            print("🎯 [初期URL] このURLは最初に渡されたURLです")
+                            print("✅ [許可] 初期URL (Spotifyモード)")
+                            decisionHandler(.allow)
+                            return
+                        } else {
+                            print("🔄 [別のURL] 初期URLと異なります")
+                            print("   初期URL: \(initialURL.absoluteString)")
+                            print("   現在URL: \(url.absoluteString)")
+                            print("🚫 [ブロック] Spotifyモード: 初期URL以外への遷移をブロックしました")
+                            decisionHandler(.cancel)
+                            return
+                        }
                     } else {
-                        print("🔄 [別のURL] 初期URLと異なります")
-                        print("   初期URL: \(initialURL.absoluteString)")
-                        print("   現在URL: \(url.absoluteString)")
-                        print("🚫 [ブロック] 初期URL以外への遷移をブロックしました")
-                        decisionHandler(.cancel)
+                        // YouTubeモード: すべてのHTTP/HTTPSを許可
+                        print("✅ [許可] HTTP/HTTPS URL (YouTubeモード)")
+                        decisionHandler(.allow)
                         return
                     }
                 }

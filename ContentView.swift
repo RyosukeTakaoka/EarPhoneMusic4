@@ -19,7 +19,7 @@ struct ContentView: View {
         .ignoresSafeArea()
         .sheet(isPresented: $viewModel.showWebBrowser) {
             if let url = viewModel.webBrowserURL {
-                WebBrowserView(url: url)
+                WebBrowserView(url: url, mode: viewModel.webBrowserMode)
             }
         }
         .onTapGesture {
@@ -164,7 +164,7 @@ struct YouTubeSearchView: View {
                             print("━━━━━━━━━━━━━━━━━━━━━━━━━━")
                             print("📝 [1] YouTube検索開始")
                             print("🔤 検索テキスト: \(searchText)")
-                            // 直接YouTube検索を呼び出し
+                            // YouTube検索（WebBrowser表示）
                             viewModel.searchYouTube(query: searchText)
                         }
                 }
