@@ -81,8 +81,11 @@ struct SpotifySearchView: View {
                         .foregroundColor(.white)
                         .accentColor(Color(hex: "#1DB954"))
                         .onSubmit {
-                            viewModel.appMode = .spotify
-                            viewModel.search(query: searchText)
+                            print("━━━━━━━━━━━━━━━━━━━━━━━━━━")
+                            print("📝 [1] Spotify検索開始")
+                            print("🔤 検索テキスト: \(searchText)")
+                            // 直接Spotify検索を呼び出し
+                            viewModel.searchSpotify(query: searchText)
                         }
                 }
                 .padding(20)
@@ -158,8 +161,11 @@ struct YouTubeSearchView: View {
                         .foregroundColor(.black)
                         .accentColor(Color(hex: "#FF0000"))
                         .onSubmit {
-                            viewModel.appMode = .youtube
-                            viewModel.search(query: searchText)
+                            print("━━━━━━━━━━━━━━━━━━━━━━━━━━")
+                            print("📝 [1] YouTube検索開始")
+                            print("🔤 検索テキスト: \(searchText)")
+                            // 直接YouTube検索を呼び出し
+                            viewModel.searchYouTube(query: searchText)
                         }
                 }
                 .padding(20)

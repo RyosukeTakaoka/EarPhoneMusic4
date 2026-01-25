@@ -73,7 +73,7 @@ class MusicViewModel: NSObject, ObservableObject {
     }
     
     // MARK: - Search
-    
+
     func search(query: String) {
         if appMode == .spotify {
             searchSpotify(query: query)
@@ -81,26 +81,68 @@ class MusicViewModel: NSObject, ObservableObject {
             searchYouTube(query: query)
         }
     }
-    
-    private func searchYouTube(query: String) {
-        guard !query.isEmpty else { return }
+
+    func searchYouTube(query: String) {
+        print("🔍 [2] searchYouTube() 呼び出し")
+
+        guard !query.isEmpty else {
+            print("⚠️ 検索テキストが空です")
+            return
+        }
+
+        print("🔤 [3] URLエンコード前: \(query)")
         let encodedQuery = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        print("🔐 [4] URLエンコード後: \(encodedQuery)")
+
         let urlString = "https://www.youtube.com/results?search_query=\(encodedQuery)"
+        print("🌐 [5] 生成されたURL: \(urlString)")
 
         if let url = URL(string: urlString) {
+            print("✅ [6] URL オブジェクト作成成功")
             webBrowserURL = url
+            print("📌 [7] webBrowserURL に設定完了")
             showWebBrowser = true
+            print("🚀 [8] showWebBrowser = true（ブラウザ表示開始）")
+            print("━━━━━━━━━━━━━━━━━━━━━━━━━━")
+        } else {
+            print("❌ URL作成失敗")
         }
     }
 
     func searchSpotify(query: String) {
-        guard !query.isEmpty else { return }
+        print("🔍 [2] searchSpotify() 呼び出し")
+
+        guard !query.isEmpty else {
+            print("⚠️ 検索テキストが空です")
+            return
+        }
+
+        print("🔤 [3] URLエンコード前の生の検索テキスト:")
+        print("    テキスト: '\(query)'")
+        print("    文字数: \(query.count)")
+        print("    文字コード: \(query.utf8.map { String(format: "%02X", $0) }.joined(separator: " "))")
+
         let encodedQuery = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-        let urlString = "https://open.spotify.com/search/\(encodedQuery)"
+        print("🔐 [4] URLエンコード後:")
+        print("    エンコード結果: '\(encodedQuery)'")
+        print("    文字数: \(encodedQuery.count)")
+
+        let urlString = "https://open.spotify.com/search/results/\(encodedQuery)"
+        print("🌐 [5] 生成された完全なURL文字列:")
+        print("    URL: '\(urlString)'")
 
         if let url = URL(string: urlString) {
+            print("✅ [6] URL オブジェクト作成成功")
+            print("    url.absoluteString: '\(url.absoluteString)'")
+            print("    url.path: '\(url.path)'")
+            print("    url.query: '\(url.query ?? "なし")'")
             webBrowserURL = url
+            print("📌 [7] webBrowserURL に設定完了: \(url.absoluteString)")
             showWebBrowser = true
+            print("🚀 [8] showWebBrowser = true（ブラウザ表示開始）")
+            print("━━━━━━━━━━━━━━━━━━━━━━━━━━")
+        } else {
+            print("❌ URL作成失敗: urlStringが無効です")
         }
     }
 }
